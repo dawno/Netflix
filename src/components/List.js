@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import{
-  Text,View,StyleSheet,FlatList,  Image
+  Text,
+  View,
+  StyleSheet,
+  FlatList,
+    Image
 } from 'react-native'
 const shows_first=[
   {
@@ -77,7 +81,7 @@ const shows_second=[
 class List extends Component{
 _renderItem(item){
   return(
-    <Image style ={{width:120, height:180}} source={{uri : item.image}}/>
+    <Image style ={{width:120, height:180}}  source={{uri : item.image}}/>
   );
 }
   render(){
