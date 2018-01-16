@@ -17,11 +17,13 @@ const {width, height} = Dimensions.get('window')
 class Menu extends Component{
   render(){
     return(
-      <View style = {styles.menu}>
-        <View style = {styles.avatarContainer}>
+    <View style = {styles.menu}>
+      <View style = {styles.avatarContainer}>
         <View style = {styles.avatarImage}>
           <Image style = {styles.avatar}
           source = {require('../images/user.png')}/>
+          <Text style= {styles.text}>Utkarsh</Text>
+          </View>
           <Icon
           name = "exchange"
           color= "white"
@@ -34,7 +36,7 @@ class Menu extends Component{
           name = "download"
           color= "white"
           size= {28}/>
-      <Text style= {styles.text}> My Downlaods</Text>
+      <Text style= {styles.text}>My Downlaods</Text>
       </View>
       <Icon style = {styles.rightIcon}
           name = "angle-right"
@@ -43,22 +45,124 @@ class Menu extends Component{
       </View>
       <View style = {styles.textWithIcon}>
       <View style = {styles.withIcon}>
-      <Icon style = {styles.iconWithText}
+      <IonIcons style = {styles.iconWithText}
           name = "md-checkmark"
           color= "white"
           size= {28}/>
       <Text style= {styles.text}>My Lists</Text>
       </View>
       <Icon style = {styles.rightIcon}
-          name = "download"
+          name = "angle-right"
           color= "white"
-          size= {28}/>
+          size= {25}/>
       </View>
-
+        <View style={[styles.items , styles.itemSelected]}>
+        <Text style= {styles.text}>Home</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Available For Children</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Netflix Originals</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>TV shows</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Actions & Adventures</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Children & Family Movies</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Comedies</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Documentries</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Drama</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Independent Movies</Text>
+        </View>
+        <View style={[styles.items , styles.noSelectedItems]}>
+        <Text style= {styles.text}>Indian Movies</Text>
+        </View>
       </ScrollView>
       </View>
-      </View>
+      
       )
   }
 }
+const styles = StyleSheet.create({
+menu :{
+  flex:1,
+  width:width,
+  height:height,
+  backgroundColor:"#191919"
+},
+avatarContainer:{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  alignItems:'center',
+  width: width / 2 + 59,
+  borderColor:'#000',
+  borderBottomWidth:3,
+  paddingHorizontal:20,
+  paddingVertical:20
+
+},
+avatar:{
+  width:60,
+  height:60,
+  marginRight:20
+
+},
+avatarImage:{
+  flexDirection:'row',
+  alignItems:'center'
+},
+text:{
+  color: '#b3b3b3',
+  fontSize: 15
+},
+textWithIcon:{
+  flexDirection:'row',
+  justifyContent:'space-between',
+  alignItems:'center',
+  paddingVertical: 15,
+  borderColor:'#000',
+  borderBottomWidth: 3
+},
+withIcon:{
+  flexDirection:'row',
+  alignItems:'center'
+},
+scrollContainer:{
+  width: width / 2 + 59
+},
+rightIcon:{
+  paddingRight: 20
+},
+iconWithText:{
+  marginRight:10,
+  paddingLeft:20
+},
+itemSelected:{
+  borderLeftWidth: 5,
+  borderColor: 'red'
+},
+noSelectedItems: {
+  paddingVertical: 15,
+  paddingLeft: 25,
+  marginTop: 5
+},
+items: {
+  paddingVertical: 15,
+  paddingLeft: 20,
+  marginTop: 5
+},
+
+})
 export default Menu 

@@ -26,7 +26,7 @@ class App extends Component{
    }
   render(){
     return(
-      <View style={[{flex:1} ,styles.container]}>
+      <View style = {[{ flex: 1} , styles.container]}>
       <SideMenu
       menu={<Menu/>}
       isOpen = {this.state.isOpen}
